@@ -18,10 +18,10 @@ const configurationObject = {
 };
 
 return fetch(destinationURL, configurationObject)
-    .then(function(response) {
+    .then(response => {
         return response.json();
     })
-    .then(function(object){
+    .then(object => {
         document.body.innerHTML = object["id"]
     })
     .catch(error => {
